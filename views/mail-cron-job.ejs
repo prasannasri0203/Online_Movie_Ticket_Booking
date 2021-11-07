@@ -1,0 +1,16 @@
+
+<h4>Hi <%= ticketDetails[0].name %>,</h4>
+<p>You have been booked the ticket for <b><%= ticketDetails[0].movie_name %></b> movie today at 
+    <b><%= ticketDetails[0].show_time %></b> in <b><%= ticketDetails[0].theater_name %></b></p>
+
+    <h4>Ticket Details</h4>
+    ----------------------------------------
+<% ticketDetails.forEach((value) => {%>
+    <p>Ticket Person Name:<b> <%= value.person_name %></b></p>
+    <p>Theater Name:<b><%= value.theater_name %></b></p>
+    <p>Show Date:<b><%= value.show_date %></b></p>
+    <p>show Time:<b><%= value.show_time %></b></p>
+    <p>Seat Number:<b><%= value.seat_no %></b></p>
+    <p>Ticket Amount:<b><%= value.ticket_amount  %></b></p>
+    ----------------------------------------
+    <% });%>

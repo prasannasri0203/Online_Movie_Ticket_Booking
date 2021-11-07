@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "c7e1b1fa-22f3-4c0d-9316-453634556b5c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SP Copy",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mani\",\r\n    \"email\":\"mani@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"userRole\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"prasannasricse@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_theater_owner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "add_theater_screen_seat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjM2MDUyNDYxLCJleHAiOjE2Mzk2NTI0NjF9.SCrBsBIuQioC1SUjNZpXpO1O2vNzbIFGWuMUrEAFtsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seatClass\":\"1\",\r\n    \"seatNo\":\"Z\",\r\n    \"status\":\"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/theater_screen_seat/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"theater_screen_seat",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_theater_screen_seat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "add_show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjM2MDUyNDYxLCJleHAiOjE2Mzk2NTI0NjF9.SCrBsBIuQioC1SUjNZpXpO1O2vNzbIFGWuMUrEAFtsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"theaterOwnerUserId\":\"5\",\r\n    \"treaterId\":\"1\",\r\n    \"movieId\":\"1\",\r\n    \"showDate\":\"2013-12-12\",\r\n    \"showTime\":\"01:00\",\r\n    \"movieAmount\":\"200\",\r\n    \"timeAvailbleStatus\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/show/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"show",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjM2MDUyNDYxLCJleHAiOjE2Mzk2NTI0NjF9.SCrBsBIuQioC1SUjNZpXpO1O2vNzbIFGWuMUrEAFtsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"theaterOwnerUserId\":\"6\",\r\n    \"treaterId\":\"2\",\r\n    \"movieId\":\"2\",\r\n    \"showDate\":\"2013-12-12\",\r\n    \"showTime\":\"03:00\",\r\n    \"movieAmount\":\"100\",\r\n    \"timeAvailbleStatus\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/show/update/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"show",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "view_movie_trailer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/api/movieTrailer/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"movieTrailer",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_book_movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjM2MTM4OTcyLCJleHAiOjE2Mzk3Mzg5NzJ9.cn8_J9wTvJXksBXA7Zww46JgHNzmW8edpvpHPlWWmV8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookMovieData\": [\r\n        {\r\n            \"movieId\":\"1\",\r\n            \"movieTimeId\":\"1\",\r\n            \"theaterId\":\"1\",\r\n            \"screenSeatId\":\"1\",\r\n            \"visitorUserId\":\"5\",\r\n            \"personName\":\"prasanna\",\r\n            \"ticketAmount\":200\r\n        },\r\n        {\r\n            \"movieId\":\"1\",\r\n            \"movieTimeId\":\"1\",\r\n            \"theaterId\":\"1\",\r\n            \"screenSeatId\":\"3\",\r\n            \"visitorUserId\":\"5\",\r\n            \"personName\":\"mani\",\r\n            \"ticketAmount\":100\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/movie_book/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"movie_book",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kids_concession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjM2MTM4OTcyLCJleHAiOjE2Mzk3Mzg5NzJ9.cn8_J9wTvJXksBXA7Zww46JgHNzmW8edpvpHPlWWmV8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"theaterId\":\"1\",\r\n    \"movieId\":\"1\",\r\n    \"dob\":\"11-05-2021\",\r\n    \"showDate\":\"2021-11-05\",\r\n    \"showTime\":\"01:00:00\",\r\n    \"timeAvailableStatus\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/kid_concession/get_amount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"kid_concession",
+								"get_amount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read_movie_rating_details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjM2MTM4OTcyLCJleHAiOjE2Mzk3Mzg5NzJ9.cn8_J9wTvJXksBXA7Zww46JgHNzmW8edpvpHPlWWmV8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/api/movie_rating_details/read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"movie_rating_details",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_movie_rating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
